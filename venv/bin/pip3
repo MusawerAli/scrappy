@@ -1,4 +1,4 @@
-#!/home/musawer/PycharmProjects/scrappy/venv/bin/python
+#!/home/musawer/PycharmProjects/tutorial/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
