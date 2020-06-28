@@ -11,10 +11,10 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response):
         questions = response.xpath('//div[@class="wysiwyg__content"]/section/h2/text()').getall()
         answers = response.xpath('//div[@class="wysiwyg__content"]/section/p/text()').getall()
-        links = response.xpath('//div[@class="wysiwyg__content"]/section/p/a').getall() 
+        links = response.selector.css("div.wysiwyg__content p a").xpath('@href').getall() 
         yield {
             'Questions': questions,
-            'Links'     :   links,
+            'Links'     : links,
             'Answers':answers,
 
         }
